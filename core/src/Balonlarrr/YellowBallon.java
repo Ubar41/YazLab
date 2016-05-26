@@ -48,8 +48,8 @@ public class YellowBallon extends Balonlar{
         zaman=1;
         if(zaman >0)
             zaman -= dt;
-        else
-            OyunBasla.b.add(new BlackBallon(480,0));
+        /*else
+            OyunBasla.b.add(new BlackBallon(480,0,));*/
     }
 
     @Override

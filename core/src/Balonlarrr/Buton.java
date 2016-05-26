@@ -16,7 +16,7 @@ public class Buton {
     String yazi;
   public  Buton(int x , int y,String yazi)
     {
-     this.x=x;
+        this.x=x;
         this.y=y;
         this.yazi=yazi;
         balonkaresi=new Rectangle(x,y+150,500,125);
@@ -25,9 +25,7 @@ public class Buton {
 
     public void render(SpriteBatch spriteBatch){
         img = new Texture(yazi);
-
         balon = new TextureRegion(img);
-
         spriteBatch.begin();
         spriteBatch.draw(balon,x,y,500,125);
         spriteBatch.end();

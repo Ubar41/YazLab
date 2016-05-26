@@ -13,11 +13,13 @@ public class BlackBallon extends Balonlar{
 
     int x;
     int y;
+    int seviye;
     Rectangle balonkaresi;
-    public BlackBallon(int x,int y )
+    public BlackBallon(int x,int y,int seviye)
     {
         this.x=x;
         this.y=y;
+        this.seviye=seviye;
     }
     public void render(SpriteBatch spriteBatch){
         img = new Texture("balonbg.png");
@@ -37,8 +39,8 @@ public class BlackBallon extends Balonlar{
 
     @Override
     public void bhareket() {
-        x++;
-        y++;
+        x=(x+seviye);
+        y=(y+seviye);
 
     }
 

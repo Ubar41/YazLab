@@ -40,6 +40,14 @@ public class tiklama implements InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
 
        // sound.play(0.1f);
+        if(OyunBasla.menudurum == 3 || OyunBasla.menudurum == 2){
+            if(OyunBasla.buton2[0].getBalonkaresi().contains(screenX,1920-screenY)){
+                OyunBasla.menudurum=0;
+                return false;
+            }
+        }
+
+
         if(OyunBasla.menudurum==0)
         {
             for (int i = 0; i <OyunBasla.buton.length ; i++) {
@@ -64,8 +72,14 @@ public class tiklama implements InputProcessor {
                     {
                         OyunBasla.menudurum=2;
                     }
+                  //  OyunBasla.tur_top.add()
+                   /* int count = OyunBasla.tur_top.size();
 
-
+                    for (int k = 0; k < OyunBasla.tur_top.size(); k++) {
+                      //  int value = OyunBasla.tur_top.get(i);
+                      //  System.out.println("Element: " + value);
+                        tur_top
+                    } */
                 }
 
             }
